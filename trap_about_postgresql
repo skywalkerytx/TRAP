@@ -1,0 +1,19 @@
+in 16.04 LTS
+
+if you install postgresql from apt
+
+postgresql.conf will not work
+
+$PGDATA/postgresql.conf will not work and never exists
+
+pg_ctl is not found in bash
+
+real one is $PGDATA/postgresql.auto.conf
+
+solution:
+
+add path for pg_ctl etc
+
+rm auto.conf ln -s for the original conf 
+
+
