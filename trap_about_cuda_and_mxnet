@@ -1,0 +1,28 @@
+on ubuntu 16.04
+
+If you install cuda from apt source
+
+REMEMBER to ln -s for /usr/loca/cuda, it's no more.
+
+new location:
+/usr/lib/x86-64* & /usr/include
+
+and for mxnet default option:
+
+in make/config.mk
+
+USE_CUDA = 0
+
+CUDA_PATH = NONE
+
+USE_CUDNN = 0
+
+USE_NVRTC = 0
+
+remember to set it right
+
+and even if you have libopencv-dev USE_OPENCV = 1 will crash you (a opencv version problem)
+
+use ADD_LDFLAGS and ADD_CFLAGS to solve it
+
+since i don't need opencv all is fine
