@@ -1,0 +1,16 @@
+In intellij, doobie.util.blablabla.Query0[A] will be recognized as Any
+
+so the following code works fine but IDEA thinks there is some bug with it:
+
+val q2 = sql"select 42".query[Int]
+
+val p3 = q2.unique
+
+the following helps:
+
+val q2:Query0[Int] = sql"select 42".query[Int] //still red about `query[Int]`
+
+val p3 = q2.unique //idea works from here
+
+
+btw, issue is created to IDEA community but nothing happens since 2015.
