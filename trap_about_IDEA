@@ -1,0 +1,9 @@
+IDEA use built-in maven,sbt,and git
+
+for git the ssh keys will be a minor problem: change to native
+
+for maven: I give it up since no pom.xml will be seen if you add maven artifact through IDE
+
+for sbt: you could use proxychains4 idea to make sbt use ss to connect, while git is disabled at this time
+
+
